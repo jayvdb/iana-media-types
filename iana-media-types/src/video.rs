@@ -40,6 +40,9 @@ pub enum Video {
     #[doc = "video/encaprtp"]
     #[serde(rename = "video/encaprtp")]
     Encaprtp,
+    #[doc = "video/evc"]
+    #[serde(rename = "video/evc")]
+    Evc,
     #[doc = "video/example"]
     #[serde(rename = "video/example")]
     Example,
@@ -88,6 +91,12 @@ pub enum Video {
     #[doc = "video/jxsv"]
     #[serde(rename = "video/jxsv")]
     Jxsv,
+    #[doc = "video/matroska"]
+    #[serde(rename = "video/matroska")]
+    Matroska,
+    #[doc = "video/matroska-3d"]
+    #[serde(rename = "video/matroska-3d")]
+    Matroska3D,
     #[doc = "video/mj2"]
     #[serde(rename = "video/mj2")]
     Mj2,
@@ -109,6 +118,9 @@ pub enum Video {
     #[doc = "video/MPV"]
     #[serde(rename = "video/MPV")]
     Mpv,
+    #[doc = "video/mpeg"]
+    #[serde(rename = "video/mpeg")]
+    Mpeg,
     #[doc = "video/mpeg4-generic"]
     #[serde(rename = "video/mpeg4-generic")]
     Mpeg4Generic,
@@ -288,6 +300,7 @@ impl ::std::fmt::Display for Video {
             Video::CelB => write!(f, "video/CelB")?,
             Video::Dv => write!(f, "video/DV")?,
             Video::Encaprtp => write!(f, "video/encaprtp")?,
+            Video::Evc => write!(f, "video/evc")?,
             Video::Example => write!(f, "video/example")?,
             Video::Ffv1 => write!(f, "video/FFV1")?,
             Video::Flexfec => write!(f, "video/flexfec")?,
@@ -304,6 +317,8 @@ impl ::std::fmt::Display for Video {
             Video::Jpeg => write!(f, "video/JPEG")?,
             Video::Jpeg2000 => write!(f, "video/jpeg2000")?,
             Video::Jxsv => write!(f, "video/jxsv")?,
+            Video::Matroska => write!(f, "video/matroska")?,
+            Video::Matroska3D => write!(f, "video/matroska-3d")?,
             Video::Mj2 => write!(f, "video/mj2")?,
             Video::Mp1S => write!(f, "video/MP1S")?,
             Video::Mp2P => write!(f, "video/MP2P")?,
@@ -311,6 +326,7 @@ impl ::std::fmt::Display for Video {
             Video::Mp4 => write!(f, "video/mp4")?,
             Video::Mp4VEs => write!(f, "video/MP4V-ES")?,
             Video::Mpv => write!(f, "video/MPV")?,
+            Video::Mpeg => write!(f, "video/mpeg")?,
             Video::Mpeg4Generic => write!(f, "video/mpeg4-generic")?,
             Video::Nv => write!(f, "video/nv")?,
             Video::Ogg => write!(f, "video/ogg")?,
@@ -394,6 +410,7 @@ impl ::std::str::FromStr for Video {
             "video/CelB" => Ok(Video::CelB),
             "video/DV" => Ok(Video::Dv),
             "video/encaprtp" => Ok(Video::Encaprtp),
+            "video/evc" => Ok(Video::Evc),
             "video/example" => Ok(Video::Example),
             "video/FFV1" => Ok(Video::Ffv1),
             "video/flexfec" => Ok(Video::Flexfec),
@@ -410,6 +427,8 @@ impl ::std::str::FromStr for Video {
             "video/JPEG" => Ok(Video::Jpeg),
             "video/jpeg2000" => Ok(Video::Jpeg2000),
             "video/jxsv" => Ok(Video::Jxsv),
+            "video/matroska" => Ok(Video::Matroska),
+            "video/matroska-3d" => Ok(Video::Matroska3D),
             "video/mj2" => Ok(Video::Mj2),
             "video/MP1S" => Ok(Video::Mp1S),
             "video/MP2P" => Ok(Video::Mp2P),
@@ -417,6 +436,7 @@ impl ::std::str::FromStr for Video {
             "video/mp4" => Ok(Video::Mp4),
             "video/MP4V-ES" => Ok(Video::Mp4VEs),
             "video/MPV" => Ok(Video::Mpv),
+            "video/mpeg" => Ok(Video::Mpeg),
             "video/mpeg4-generic" => Ok(Video::Mpeg4Generic),
             "video/nv" => Ok(Video::Nv),
             "video/ogg" => Ok(Video::Ogg),

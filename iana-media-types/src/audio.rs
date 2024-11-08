@@ -142,6 +142,9 @@ pub enum Audio {
     #[doc = "audio/example"]
     #[serde(rename = "audio/example")]
     Example,
+    #[doc = "audio/flac"]
+    #[serde(rename = "audio/flac")]
+    Flac,
     #[doc = "audio/flexfec"]
     #[serde(rename = "audio/flexfec")]
     Flexfec,
@@ -220,6 +223,9 @@ pub enum Audio {
     #[doc = "audio/LPC"]
     #[serde(rename = "audio/LPC")]
     Lpc,
+    #[doc = "audio/matroska"]
+    #[serde(rename = "audio/matroska")]
+    Matroska,
     #[doc = "audio/MELP"]
     #[serde(rename = "audio/MELP")]
     Melp,
@@ -235,6 +241,9 @@ pub enum Audio {
     #[doc = "audio/mhas"]
     #[serde(rename = "audio/mhas")]
     Mhas,
+    #[doc = "audio/midi-clip"]
+    #[serde(rename = "audio/midi-clip")]
+    MidiClip,
     #[doc = "audio/mobile-xmf"]
     #[serde(rename = "audio/mobile-xmf")]
     MobileXmf,
@@ -529,6 +538,7 @@ impl ::std::fmt::Display for Audio {
             Audio::Evrcwb1 => write!(f, "audio/EVRCWB1")?,
             Audio::Evs => write!(f, "audio/EVS")?,
             Audio::Example => write!(f, "audio/example")?,
+            Audio::Flac => write!(f, "audio/flac")?,
             Audio::Flexfec => write!(f, "audio/flexfec")?,
             Audio::Fwdred => write!(f, "audio/fwdred")?,
             Audio::G7110 => write!(f, "audio/G711-0")?,
@@ -555,11 +565,13 @@ impl ::std::fmt::Display for Audio {
             Audio::L20 => write!(f, "audio/L20")?,
             Audio::L24 => write!(f, "audio/L24")?,
             Audio::Lpc => write!(f, "audio/LPC")?,
+            Audio::Matroska => write!(f, "audio/matroska")?,
             Audio::Melp => write!(f, "audio/MELP")?,
             Audio::Melp600 => write!(f, "audio/MELP600")?,
             Audio::Melp1200 => write!(f, "audio/MELP1200")?,
             Audio::Melp2400 => write!(f, "audio/MELP2400")?,
             Audio::Mhas => write!(f, "audio/mhas")?,
+            Audio::MidiClip => write!(f, "audio/midi-clip")?,
             Audio::MobileXmf => write!(f, "audio/mobile-xmf")?,
             Audio::Mpa => write!(f, "audio/MPA")?,
             Audio::Mp4 => write!(f, "audio/mp4")?,
@@ -694,6 +706,7 @@ impl ::std::str::FromStr for Audio {
             "audio/EVRCWB1" => Ok(Audio::Evrcwb1),
             "audio/EVS" => Ok(Audio::Evs),
             "audio/example" => Ok(Audio::Example),
+            "audio/flac" => Ok(Audio::Flac),
             "audio/flexfec" => Ok(Audio::Flexfec),
             "audio/fwdred" => Ok(Audio::Fwdred),
             "audio/G711-0" => Ok(Audio::G7110),
@@ -720,11 +733,13 @@ impl ::std::str::FromStr for Audio {
             "audio/L20" => Ok(Audio::L20),
             "audio/L24" => Ok(Audio::L24),
             "audio/LPC" => Ok(Audio::Lpc),
+            "audio/matroska" => Ok(Audio::Matroska),
             "audio/MELP" => Ok(Audio::Melp),
             "audio/MELP600" => Ok(Audio::Melp600),
             "audio/MELP1200" => Ok(Audio::Melp1200),
             "audio/MELP2400" => Ok(Audio::Melp2400),
             "audio/mhas" => Ok(Audio::Mhas),
+            "audio/midi-clip" => Ok(Audio::MidiClip),
             "audio/mobile-xmf" => Ok(Audio::MobileXmf),
             "audio/MPA" => Ok(Audio::Mpa),
             "audio/mp4" => Ok(Audio::Mp4),
